@@ -71,3 +71,29 @@ mkfs.ext4 /dev/"3rd"
 #--------Formatting of HOME partition
 
 mkfs.ext4 /dev/"4th"
+
+# Mounting of the created partitions
+#-------- This is the installation directory
+
+mount /dev/"3rd" /mnt
+
+#-------- Mounting the BOOT(EFI) partition
+
+mkdir -p /mnt/boot/efi
+
+mount /dev/"1st" /mnt/boot/efi
+
+#-------- Mounting the HOME partition
+
+mkdir /mnt/home 
+
+mount /dev/"4th" /mnt/home
+
+#-------- Check the partitions 
+
+lsblk
+
+# Installation of the base packages
+pacstrap /mnt base linux linux-firmware vim nano intel-ucode
+
+
