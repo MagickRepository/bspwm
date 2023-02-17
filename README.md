@@ -1,37 +1,54 @@
-#--------Arch BSPWM clean install--------
+# Arch BSPWM clean install personal notes
 
-# check for the WiFi station name
+# WiFi Configuration
 ip a
-    
-# WiFi station name is usually wlan0
 
-# if WiFi state is down:
+   #if WiFi state is down
+
 iwctl
+
 station wlan0 connect "Name of network"
+
 "Password"
+
 exit
 
-#-----------------------------------------
 # Sync Pacman 
 pacman -Syy
 
-#-----------------------------------------
+
 # Formatting of the disk & partition creation
-  #1. Start off by checking the current layout
-   lsblk
+   #Start off by checking the current layout
 
-  #2. Open & wipe the disk in its entirety
-   gdisk /dev/"diskname"
+lsblk
+
+
+   #Open & wipe the disk in its entirety
+
+gdisk /dev/"diskname"
    
-  #3. Delete all partitions on the disk
-   3.1 o    
-   3.2 Y to proceed
-   3.3 w to write changes 
-   3.4 Y to proceed 
 
-  #4. Partition Creation
-   # n to create new 
-   4.1 500M ef00 #EFI Partition 
-   4.2 4G.  8200 #SWAP Partition
-   4.3 50G  blank #
-   4.4 Rest blank #
+   #Delete all partitions on the disk
+
+o  to wipe all
+
+Y  to proceed
+
+w  to write changes 
+
+Y  to proceed 
+
+
+#Partition Creation
+
+
+n  to create new 
+##
+
+1st.  500M ef00 #EFI Partition 
+
+2nd.  4G.  8200 #SWAP Partition
+
+3rd.  50G  blank #
+
+4th.  Rest blank #
