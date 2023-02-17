@@ -168,3 +168,22 @@ grub-instal --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 #Generate the grub config file
 
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Enable Services
+systemctl enable NetworkManager
+
+systemctl enable Bluetooth
+
+systemctl enable fstrim.trim
+
+# Add a user
+useradd -mG wheel "name"
+
+passwd "name"
+
+#Uncomment the first wheel group
+
+%wheel ALL=(ALL) ALL
+
+# exit, umount -a, reboot 
+
