@@ -150,4 +150,21 @@ passwd
 pacman -S grub efibootmgr networkmanager network-manager-applet
 dialog mtools dosfstools wpa_supplicant git bash-completion
 base-devel linux-headers bluez bluez-utils inetutils
-dnsutils 
+dnsutils gvfs gvfs-smb openssh nvidia nvidia-utils 
+
+# Add the GPU card module 
+nano /etc/mkinitcpio.conf 
+
+#In the MODULES=() add nvidia
+MODULES=(nvidia)
+
+#Then regenerate the file with the Linux parameter or linux-lts
+
+mkinitcpio -p linux
+
+# GRUB installation 
+grub-instal --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+
+#Generate the grub config file
+
+grub-mkconfig -o /boot/grub/grub.cfg
