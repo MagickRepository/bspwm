@@ -146,3 +146,7 @@ nano /etc/hosts
 # Give a pass to the root user
 passwd
 
+# Package installation
+pacman -S grub efibootmgr networkmanager network-manager-applet
+dialog mtools dosfstools wpa_supplicant git bash-completion
+base-devel linux-headers bluez bluez-utils 
