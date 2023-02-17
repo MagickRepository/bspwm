@@ -125,7 +125,7 @@ locale-gen
 
 #--------Edit the locale.conf 
 
-nano /etc/local.conf
+nano /etc/locale.conf
 
 #-------Add "LANG=en_US.UTF-8" save&exit
 
@@ -149,4 +149,5 @@ passwd
 # Package installation
 pacman -S grub efibootmgr networkmanager network-manager-applet
 dialog mtools dosfstools wpa_supplicant git bash-completion
-base-devel linux-headers bluez bluez-utils 
+base-devel linux-headers bluez bluez-utils inetutils
+dnsutils 
