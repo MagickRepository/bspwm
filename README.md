@@ -118,6 +118,7 @@ hwclock --systohc
 nano /etc/locale.gen
 
 #--------Unhash the en_US.UTF-8 UTF-8 locale
+
 #--------Save & Exit, then generate the locales with:
 
 locale-gen
@@ -135,10 +136,13 @@ echo "Name" >> /etc/hostname
 nano /etc/hosts
 
 #-------- Add in the following
+
 127.0.0.1  localhost
+
 ::1        localhost
+
 127.0.1.1  "hostname".localdomain    "hostname"
 
 # Give a pass to the root user
-passed
+passwd
 
