@@ -1,0 +1,5 @@
+git dolphin nitrogen dmenu bash-completion firefox
+nvidia nvidia-utils nvidia-settings xorg xorg-xinit
+picom alacritty terminator 
+
+bspwm sxhkd polybar rofi 
