@@ -2,4 +2,15 @@ git dolphin nitrogen dmenu bash-completion firefox
 nvidia nvidia-utils nvidia-settings xorg xorg-xinit
 picom alacritty terminator 
 
-bspwm sxhkd polybar rofi 
+bspwm sxhkd polybar rofi mpd
+
+Yay install:
+terminus-font-ttf
+ttf-icomoon-feather
+ttf-font-awesome
+Noto Sans Mono CJK JP
+nerd-fonts-complete
+
+
+
+
