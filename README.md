@@ -155,10 +155,10 @@ dnsutils gvfs gvfs-smb openssh nvidia nvidia-utils
 # Add the GPU card module 
 nano /etc/mkinitcpio.conf 
 
-#In the MODULES=() add nvidia
+#----In the MODULES=() add nvidia
 MODULES=(nvidia)
 
-#Then regenerate the file with the Linux parameter or linux-lts
+#----Then regenerate the file with the Linux parameter or linux-lts
 
 mkinitcpio -p linux
 
@@ -187,3 +187,4 @@ passwd "name"
 
 # exit, umount -a, reboot 
 
+nmcli device wifi connect "SSID" password "password"
