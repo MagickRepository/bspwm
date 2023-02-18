@@ -1,3 +1,9 @@
+grub efibootmgr networkmanager network-manager-applet
+dialog mtools dosfstools wpa_supplicant bash-completion
+base-devel linux-headers bluez bluez-utils inetutils
+dnsutils gvfs gvfs-smb openssh nvidia nvidia-utils 
+nvidia-settings xorg xorg-xinit
+
 git dolphin nitrogen dmenu bash-completion firefox
 nvidia nvidia-utils nvidia-settings xorg xorg-xinit
 picom alacritty terminator 
